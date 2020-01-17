@@ -43,7 +43,7 @@
         "Programmatically provisioned deployment-ready servers on DigitalOcean with Docker Machine",
         "Implemented API calls to Docker Swarm to perform CRUD functions with containers on the remote manager machine",
         "Leveraged WebSockets for providing service logs to users",
-        "Streamed application build outputs to web and CLI using Server Sent Events",
+        "Streamed application build output to web and CLI using Server Sent Events",
         "Designed workflows and information architecture for the web application interface",
         "Read case study at: https://mothership-paas.github.io/case-study"
       ],
