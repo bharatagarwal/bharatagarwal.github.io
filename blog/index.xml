@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Blog</title>
+    <link>https://bharatagarwal.io/blog/</link>
+    <description>Recent content in Blogs on Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 18 Feb 2020 13:51:29 +0530</lastBuildDate>
+    
+	<atom:link href="https://bharatagarwal.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First Post</title>
+      <link>https://bharatagarwal.io/first-post/</link>
+      <pubDate>Tue, 18 Feb 2020 13:51:29 +0530</pubDate>
+      
+      <guid>https://bharatagarwal.io/first-post/</guid>
+      <description>Mothership an open-source platform-as-service for small applications. Designed to be used for deploying internal-facing apps for companies, Mothership is easy to setup. Companies can have their own self-hosted PaaS with a simple mothership-setup command.
+Once set up, users can use mothership command-line interface to web interface to deploy their apps to the cloud without any need for knowledge of servers or containers.</description>
+    </item>
+    
+  </channel>
+</rss>
