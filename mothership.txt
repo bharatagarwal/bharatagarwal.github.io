@@ -1,0 +1,6 @@
+Mothership is an open-source platform-as-a-service designed to democratize the process of building a PaaS
+
+- Chose a beginner-friendly stack using Node.js and Docker Swarm
+- Programmatically provisioned servers on DigitalOcean with Docker Machine
+- Containerised applications for machine instances using cloud-native buildpacks
+- Read the case study for Mothership at https://mothership.live
