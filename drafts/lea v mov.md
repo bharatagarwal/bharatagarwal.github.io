@@ -1,13 +1,67 @@
- In Intel, 86,64 assembly, the is going to be an address  
+## The dilemma
 
-For a long time, I've been confused between the effective address and moving instructions   
+In x86/64 assembly intel syntax, for a long time, I've been confused between the load effective address (`lea`) and move (`mov`) instructions.   
 
-I think what I've been imagining was that Lord Hyphen effective address was performing in some weird manner, but in fact it is performing the way you would expect it to. It's just that people are using it to do calculations 
+I've been imagining was that `LEA` has been doing some magic, taking contextual decisions based on whether the values inside the square bracket are addresses or naive values. This seemed counter-intuitive, seeing as assembly is supposed to be simpler than most languages.
 
-The move instruction interpret the second argument, the bracket address as as an address and it references from that address and gets the value and stores that in the source upper end   
+## An example
 
-The Lord effective address instruction expects the second op to be an address. The brackets are notation and there are some convenience calculation syntax that can be used to multiply with the multiple of two and add and so valued determined. Essentially the value that inside the square brackets is stored in the source . 
+Say, you have the value `0xffffffa` in `rax`.
 
-If you choose to do this values that are not addresses and form of faster calculation   
+How do the following two instructions differ:
 
-So do something like ADI +4 into RX what you doing is calculating a value which is interpreted as an address and stored in the force of Rent   which is fine, not an address. It's a value and you've done a calculation anyway 
+```
+mov rdi, [rax]
+lea rdi, [rax]
+```
+
+### mov rdi, [rax]
+This is equivalent to,
+
+```
+rdi = *rax
+```
+
+### lea rdi, [rax]
+This is equivalent to,
+
+```
+rdi = rax
+```
+
+Now, the square brackets notation, `[]` indicates that the operand is an address.
+
+We can do things like,
+```
+[rax + rdx]
+[rax + 4*rdx]
+[rax + 4*rdx + 5]
+```
+
+Whatever the computation, the meaning of rax and rdx does not change, whether we're doing this for `lea` or `mov`
+
+Some rascally developers might contract the following operations
+
+```
+add rax, rdx
+mul rax, 4
+add rax, 5
+add rax, rcx
+```
+
+into something like this
+
+```
+lea rax, [rcx + 4 * rdx + 5]
+```
+Thereby reducing the number of fetch, decode, execute steps. Furthermore, the fact that it follows a pattern of
+
+```
+a + 2^b * c + d
+```
+enables it to have a more specific path than those individual circuits.
+
+The fact that lea has its own circuitry means that it can be run in parallel with integer circuitry.
+
+## The logic still stands
+Even though we're gaining all of these advantages, at its root, the lea instruction is computing a value, and storing that value in a register. The mechanism was designed for computing values, but there's no sense of a 'type' here. Any value computed inside the square brackets is considered an address, and lea simply stores that value -- it loads the effective 'address' in the source operand.
