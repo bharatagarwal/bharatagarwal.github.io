@@ -1,0 +1,301 @@
+Debugger commands
+	apropos           -- List debugger commands related to a word or subject.
+		Syntax: apropos <search-word>
+  
+	breakpoint        -- Commands for operating on breakpoints (see 'help b' for shorthand.)
+		Syntax: breakpoint <subcommand> [<command-options>]
+
+		The following subcommands are supported:
+			clear   -- Delete or disable breakpoints matching the specified source file and line.
+			command -- Commands for adding, removing and listing LLDB commands executed when a breakpoint is hit.
+			delete  -- Delete the specified breakpoint(s).  If no breakpoints are specified, delete them all.
+			disable -- Disable the specified breakpoint(s) without deleting them.  If none are specified, disable all breakpoints.
+			enable  -- Enable the specified disabled breakpoint(s). If no breakpoints are specified, enable all of them.
+			list    -- List some or all breakpoints at configurable levels of detail.
+			modify  -- Modify the options on a breakpoint or set of breakpoints in the executable.  If no breakpoint is specified, acts on the last created breakpoint.  With the exception of -e, -d and -i, passing an empty argument clears the modification.
+			name    -- Commands to manage name tags for breakpoints
+			read    -- Read and set the breakpoints previously saved to a file with "breakpoint write".
+			set     -- Sets a breakpoint or set of breakpoints in the executable.
+			write   -- Write the breakpoints listed to a file that can be read in with "breakpoint read".  If given no arguments, writes all breakpoints.
+
+	command           -- Commands for managing custom LLDB commands.
+		Syntax: command <subcommand> [<subcommand-options>]
+
+		The following subcommands are supported:
+		    alias     -- Define a custom command in terms of an existing command.  Expects 'raw' input (see 'help raw-input'.)
+		    container -- Commands for adding container commands to lldb.  Container commands are containers for other commands.  
+		    	You can add nested container commands by specifying a command path, but but you cant add commands into the built-in command hierarchy.
+		    delete    -- Delete one or more custom commands defined by 'command regex'.
+		    regex     -- Define a custom command in terms of existing commands by matching regular expressions.
+		    script    -- Commands for managing custom commands implemented by interpreter scripts.
+		    source    -- Read and execute LLDB commands from the file <filename>.
+		    unalias   -- Delete one or more custom commands defined by 'command alias'.
+	
+	disassemble       -- Disassemble specified instructions in the current target.  Defaults to the current function for the current thread and stack frame.
+  		Syntax: disassemble [<cmd-options>]
+	    	--force
+	            Force dissasembly of large functions.
+	    	-A <arch> ( --arch <arch> )
+	            Specify the architecture to use from cross disassembly.
+	    	-C <num-lines> ( --context <num-lines> )
+	            Number of context lines of source to show.
+	    	-F <disassembly-flavor> ( --flavor <disassembly-flavor> )
+	            Name of the disassembly flavor you want to use. Currently the only valid options are default, and for Intel architectures, att and intel.
+	    	-P <plugin> ( --plugin <plugin> )
+	            Name of the disassembler plugin you want to use.
+	    	-a <address-expression> ( --address <address-expression> )
+	            Disassemble function containing this address.
+	    	-b ( --bytes )
+	            Show opcode bytes when disassembling.
+	    	-c <num-lines> ( --count <num-lines> )
+	            Number of instructions to display.
+	    	-e <address-expression> ( --end-address <address-expression> )
+	            Address at which to end disassembling.
+	    	-f ( --frame )
+	            Disassemble from the start of the current frames function.
+	    	-l ( --line )
+	            Disassemble the current frames current source line instructions if there is debug line table information, else disassemble around the pc.
+	    	-m ( --mixed )
+	            Enable mixed source and assembly display.
+	    	-n <function-name> ( --name <function-name> )
+	            Disassemble entire contents of the given function name.
+	    	-p ( --pc )
+	            Disassemble around the current pc.
+	    	-r ( --raw )
+	            Print raw disassembly with no symbol information.
+	    	-s <address-expression> ( --start-address <address-expression> )
+	            Address at which to start disassembling.
+
+	expression        -- Evaluate an expression on the current thread.  Displays any returned value with LLDBs default formatting.
+		Examples:
+
+	    expr my_struct->a = my_array[3]
+	    expr -f bin -- (index * 8) + 5
+	    expr unsigned int $foo = 5
+	    expr char c[] = "foo"; c[0]
+
+	frame             -- Commands for selecting and examing the current threads stack frames.
+		Syntax: frame <subcommand> [<subcommand-options>]
+
+			The following subcommands are supported:
+				diagnose   -- Try to determine what path the current stop location used to get to a register or address
+				info       -- List information about the current stack frame in the current thread.
+				recognizer -- Commands for editing and viewing frame recognizers.
+				select     -- Select the current stack frame by index from within the current thread (see 'thread backtrace'.)
+				variable   -- Show variables for the current stack frame. Defaults to all arguments and local variables in scope. Names of argument, local, file static and file global variables can be specified.
+
+	help              -- Show a list of all debugger commands, or give details about a specific command.
+
+	language          -- Commands specific to a source language.
+		Syntax: language <language-name> <subcommand> [<subcommand-options>]
+
+		The following subcommands are supported:
+			cplusplus    -- Commands for operating on the C++ language runtime.
+			objc         -- Commands for operating on the Objective-C language runtime.
+			renderscript -- Commands for operating on the RenderScript runtime.
+
+	log               -- Commands controlling LLDB internal logging.
+		Syntax: log <subcommand> [<command-options>]
+
+		The following subcommands are supported:
+			disable -- Disable one or more log channel categories.
+			enable  -- Enable logging for a single log channel.
+			list    -- List the log categories for one or more log channels.  If none specified, lists them all.
+			timers  -- Enable, disable, dump, and reset LLDB internal performance timers.
+
+	memory            -- Commands for operating on memory in the current target process.
+		Syntax: memory <subcommand> [<subcommand-options>]
+
+		The following subcommands are supported:
+			find    -- Find a value in the memory of the current target process.
+			history -- Print recorded stack traces for allocation/deallocation events associated with an address.
+			read    -- Read from the memory of the current target process.
+			region  -- Get information on the memory region containing an address in the current target process.
+			tag     -- Commands for manipulating memory tags
+			write   -- Write to the memory of the current target process.
+
+	platform          -- Commands to manage and create platforms.
+		Syntax: platform [connect|disconnect|info|list|status|select] ...
+
+		The following subcommands are supported:
+	      connect         -- Select the current platform by providing a connection URL.
+	      disconnect      -- Disconnect from the current platform.
+	      file            -- Commands to access files on the current platform.
+	      file-exists     -- Check if the file exists on the remote end.
+	      get-file        -- Transfer a file from the remote end to the local host.
+	      get-permissions -- Get the file permission bits from the remote end.
+	      get-size        -- Get the file size from the remote end.
+	      list            -- List all platforms that are available.
+	      mkdir           -- Make a new directory on the remote end.
+	      process         -- Commands to query, launch and attach to processes on the current platform.
+	      put-file        -- Transfer a file from this system to the remote end.
+	      select          -- Create a platform if needed and select it as the current platform.
+	      settings        -- Set settings for the current targets platform, or for a platform by name.
+	      shell           -- Run a shell command on the current platform.  Expects 'raw' input (see 'help raw-input'.)
+	      status          -- Display status for the current platform.
+	      target-install  -- Install a target (bundle or executable file) to the remote end.
+
+	plugin            -- Commands for managing LLDB plugins.
+		Syntax: plugin <subcommand> [<subcommand-options>]
+
+		The following subcommands are supported:
+			load            -- Import a dylib that implements an LLDB plugin.
+			structured-data -- Parent for per-plugin structured data commands
+
+	process           -- Commands for interacting with processes on the current platform.
+		Syntax: process <subcommand> [<subcommand-options>]
+
+		The following subcommands are supported:
+			attach    -- Attach to a process.
+			connect   -- Connect to a remote debug service.
+			continue  -- Continue execution of all threads in the current process.
+			detach    -- Detach from the current target process.
+			handle    -- Manage LLDB handling of OS signals for the current target process.  Defaults to showing current policy.
+			interrupt -- Interrupt the current target process.
+			kill      -- Terminate the current target process.
+			launch    -- Launch the executable in the debugger.
+			load      -- Load a shared library into the current process.
+			plugin    -- Send a custom command to the current target process plug-in.
+			save-core -- Save the current process as a core file using an appropriate file type.
+			signal    -- Send a UNIX signal to the current target process.
+			status    -- Show status and stop location for the current target process.
+			trace     -- Commands for tracing the current process.
+			unload    -- Unload a shared library from the current process using the index returned by a previous call to "process load".
+
+	quit              -- Quit the LLDB debugger.
+		Syntax: quit [exit-code]
+
+	register          -- Commands to access registers for the current thread and stack frame.
+		Syntax: register [read|write] ...
+
+		The following subcommands are supported:
+			read  -- Dump the contents of one or more register values from the current frame.  If no register is specified, dumps them all.
+			write -- Modify a single register value.
+
+	script            -- Invoke the script interpreter with provided code and display any results.  Start the interactive interpreter if no code is supplied.
+		Syntax: script [--language <scripting-language> --] [<script-code>]
+
+		Command Options Usage:
+  			script [-l <script-language>]
+			-l <script-language> ( --language <script-language> )
+            	Specify the scripting  language. If none is specific the default scripting language is used. Values: python | lua | default
+
+	session           -- Commands controlling LLDB session.
+		Syntax: session <subcommand> [<command-options>]
+
+			The following subcommands are supported:
+				history -- Dump the history of commands in this session. Commands in the history list can be run again using "!<INDEX>".   "!-<OFFSET>" will re-run the command that is <OFFSET> commands from the end of the list (counting the current command).
+				save    -- Save the current session transcripts to a file. If no file if specified, transcripts will be saved to a temporary file.
+
+	settings          -- Commands for managing LLDB settings.
+		Syntax: settings <subcommand> [<command-options>]
+
+		The following subcommands are supported:
+			append        -- Append one or more values to a debugger array, dictionary, or string setting.  Expects 'raw' input (see 'help raw-input'.)
+			clear         -- Clear a debugger setting array, dictionary, or string. If '-a' option is specified, it clears all settings.
+			insert-after  -- Insert one or more values into a debugger array settings after the specified element index.  Expects 'raw' input (see 'help raw-input'.)
+			insert-before -- Insert one or more values into an debugger array setting immediately before the specified element index.  Expects 'raw' input (see 'help raw-input'.)
+			list          -- List and describe matching debugger settings.  Defaults to all listing all settings.
+			read          -- Read settings previously saved to a file with "settings write".
+			remove        -- Remove a value from a setting, specified by array index or dictionary key.  Expects 'raw' input (see 'help raw-input'.)
+			replace       -- Replace the debugger setting value specified by array index or dictionary key.  Expects 'raw' input (see 'help raw-input'.)
+			set           -- Set the value of the specified debugger setting.  Expects 'raw' input (see 'help raw-input'.)
+			show          -- Show matching debugger settings and their current values.  Defaults to showing all settings.
+			write         -- Write matching debugger settings and their current values to a file that can be read in with "settings read". Defaults to writing all settings.
+
+	source            -- Commands for examining source code described by debug information for the current target process.
+		Syntax: source <subcommand> [<subcommand-options>]
+
+		The following subcommands are supported:
+			info -- Display source line information for the current target process.  Defaults to instruction pointer in current stack frame.
+			list -- Display source code for the current target process as specified by options.
+
+	statistics        -- Print statistics about a debugging session
+		Syntax: statistics <subcommand> [<subcommand-options>]
+
+		The following subcommands are supported:
+			disable -- Disable statistics collection
+			dump    -- Dump metrics in JSON format
+			enable  -- Enable statistics collection
+
+	target            -- Commands for operating on debugger targets.
+		Syntax: target <subcommand> [<subcommand-options>]
+
+		The following subcommands are supported:
+			create                  -- Create a target using the argument as the main executable.
+			delete                  -- Delete one or more targets by target index.
+			dump                    -- Commands for dumping information about the target.
+			list                    -- List all current targets in the current debug session.
+			modules                 -- Commands for accessing information for one or more target modules.
+			select                  -- Select a target as the current target by target index.
+			show-launch-environment -- Shows the environment being passed to the process when launched, taking info account 3 settings: target.env-vars, target.inherit-env and target.unset-env-vars.
+			stop-hook               -- Commands for operating on debugger target stop-hooks.
+			symbols                 -- Commands for adding and managing debug symbol files.
+			variable                -- Read global variables for the current target, before or while running a process.
+
+	thread            -- Commands for operating on one or more threads in the current process.
+		Syntax: thread <subcommand> [<subcommand-options>]
+
+		The following subcommands are supported:
+			backtrace      -- Show thread call stacks.  Defaults to the current thread, thread indexes can be specified as arguments.
+			                Use the thread-index "all" to see all threads.
+			                Use the thread-index "unique" to see threads grouped by unique call stacks.
+			                Use 'settings set frame-format' to customize the printing of frames in the backtrace and 'settings set thread-format' to customize the thread header.
+			continue       -- Continue execution of the current target process.  One or more threads may be specified, by default all threads continue.
+			exception      -- Display the current exception object for a thread. Defaults to the current thread.
+			info           -- Show an extended summary of one or more threads.  Defaults to the current thread.
+			jump           -- Sets the program counter to a new address.
+			list           -- Show a summary of each thread in the current target process.  Use 'settings set thread-format' to customize the individual thread listings.
+			plan           -- Commands for managing thread plans that control execution.
+			return         -- Prematurely return from a stack frame, short-circuiting execution of newer frames and optionally yielding a specified value.  Defaults to the exiting the current stack frame.  Expects
+			                'raw' input (see 'help raw-input'.)
+			select         -- Change the currently selected thread.
+			siginfo        -- Display the current siginfo object for a thread. Defaults to the current thread.
+			step-in        -- Source level single step, stepping into calls.  Defaults to current thread unless specified.
+			step-inst      -- Instruction level single step, stepping into calls.  Defaults to current thread unless specified.
+			step-inst-over -- Instruction level single step, stepping over calls.  Defaults to current thread unless specified.
+			step-out       -- Finish executing the current stack frame and stop after returning.  Defaults to current thread unless specified.
+			step-over      -- Source level single step, stepping over calls.  Defaults to current thread unless specified.
+			step-scripted  -- Step as instructed by the script class passed in the -C option.  You can also specify a dictionary of key (-k) and value (-v) pairs that will be used to populate an SBStructuredData
+			                Dictionary, which will be passed to the constructor of the class implementing the scripted step.  See the Python Reference for more details.
+			trace          -- Commands for operating on traces of the threads in the current process.
+			until          -- Continue until a line number or address is reached by the current or specified thread.  Stops when returning from the current function as a safety measure.  The target line number(s) are
+			                given as arguments, and if more than one is provided, stepping will stop when the first one is hit.
+
+	trace             -- Commands for loading and using processor trace information.
+		Syntax: trace [<sub-command-options>]
+
+		The following subcommands are supported:
+			dump   -- Dump the loaded processor trace data.
+			load   -- Load a processor trace session from a JSON file.
+			schema -- Show the schema of the given trace plugin.
+
+
+	type              -- Commands for operating on the type system.
+		Syntax: type [<sub-command-options>]
+
+		The following subcommands are supported:
+			category  -- Commands for operating on type categories.
+			filter    -- Commands for operating on type filters.
+			format    -- Commands for customizing value display formats.
+			lookup    -- Lookup types and declarations in the current target, following language-specific naming conventions.  Expects 'raw' input (see 'help raw-input'.)
+			summary   -- Commands for editing variable summary display options.
+			synthetic -- Commands for operating on synthetic type representations.
+	
+
+	version           -- Show the LLDB debugger version.
+		Syntax: version
+
+	watchpoint        -- Commands for operating on watchpoints.
+		Syntax: watchpoint <subcommand> [<command-options>]
+
+		The following subcommands are supported:
+			command -- Commands for adding, removing and examining LLDB commands executed when the watchpoint is hit (watchpoint 'commands').
+			delete  -- Delete the specified watchpoint(s).  If no watchpoints are specified, delete them all.
+			disable -- Disable the specified watchpoint(s) without removing it/them.  If no watchpoints are specified, disable them all.
+			enable  -- Enable the specified disabled watchpoint(s). If no watchpoints are specified, enable all of them.
+			ignore  -- Set ignore count on the specified watchpoint(s).  If no watchpoints are specified, set them all.
+			list    -- List all watchpoints at configurable levels of detail.
+			modify  -- Modify the options on a watchpoint or set of watchpoints in the executable.  If no watchpoint is specified, act on the last created watchpoint.  Passing an empty argument clears the
+			         modification.
+			set     -- Commands for setting a watchpoint.

@@ -1,0 +1,268 @@
+  <meta charset="UTF-8">
+<table>
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>add-dsym</td>
+<td>Add a debug symbol file to one of the target’s current modules by
+specifying a path to a debug symbols file or by using the options to
+specify a module.</td>
+</tr>
+<tr class="even">
+<td>attach</td>
+<td>Attach to process by ID or name.</td>
+</tr>
+<tr class="odd">
+<td>b</td>
+<td>Set a breakpoint using one of several shorthand formats.</td>
+</tr>
+<tr class="even">
+<td>bt</td>
+<td>Show the current thread’s call stack. Any numeric argument displays
+at most that many frames. The argument ‘all’ displays all threads.</td>
+</tr>
+<tr class="odd">
+<td>c</td>
+<td>Continue execution of all threads in the current process.</td>
+</tr>
+<tr class="even">
+<td>call</td>
+<td>Evaluate an expression on the current thread. Displays any returned
+value with LLDB’s default formatting.</td>
+</tr>
+<tr class="odd">
+<td>continue</td>
+<td>Continue execution of all threads in the current process.</td>
+</tr>
+<tr class="even">
+<td>detach</td>
+<td>Detach from the current target process.</td>
+</tr>
+<tr class="odd">
+<td>di</td>
+<td>Disassemble specified instructions in the current target. Defaults
+to the current function for the current thread and stack frame.</td>
+</tr>
+<tr class="even">
+<td>dis</td>
+<td>Disassemble specified instructions in the current target. Defaults
+to the current function for the current thread and stack frame.</td>
+</tr>
+<tr class="odd">
+<td>display</td>
+<td>Evaluate an expression at every stop (see ‘help target
+stop-hook’.)</td>
+</tr>
+<tr class="even">
+<td>down</td>
+<td>Select a newer stack frame. Defaults to moving one frame, a numeric
+argument can specify an arbitrary number.</td>
+</tr>
+<tr class="odd">
+<td>env</td>
+<td>Shorthand for viewing and setting environment variables.</td>
+</tr>
+<tr class="even">
+<td>exit</td>
+<td>Quit the LLDB debugger.</td>
+</tr>
+<tr class="odd">
+<td>f</td>
+<td>Select the current stack frame by index from within the current
+thread (see ‘thread backtrace’.)</td>
+</tr>
+<tr class="even">
+<td>file</td>
+<td>Create a target using the argument as the main executable.</td>
+</tr>
+<tr class="odd">
+<td>finish</td>
+<td>Finish executing the current stack frame and stop after returning.
+Defaults to current thread unless specified.</td>
+</tr>
+<tr class="even">
+<td>history</td>
+<td>Dump the history of commands in this session. Commands in the
+history list can be run again using “!<INDEX>”. “!-<OFFSET>” will re-run
+the command that is <OFFSET> commands from the end of the list (counting
+the current command).</td>
+</tr>
+<tr class="odd">
+<td>image</td>
+<td>Commands for accessing information for one or more target
+modules.</td>
+</tr>
+<tr class="even">
+<td>j</td>
+<td>Set the program counter to a new address.</td>
+</tr>
+<tr class="odd">
+<td>jump</td>
+<td>Set the program counter to a new address.</td>
+</tr>
+<tr class="even">
+<td>kill</td>
+<td>Terminate the current target process.</td>
+</tr>
+<tr class="odd">
+<td>l</td>
+<td>List relevant source code using one of several shorthand
+formats.</td>
+</tr>
+<tr class="even">
+<td>list</td>
+<td>List relevant source code using one of several shorthand
+formats.</td>
+</tr>
+<tr class="odd">
+<td>n</td>
+<td>Source level single step, stepping over calls. Defaults to current
+thread unless specified.</td>
+</tr>
+<tr class="even">
+<td>next</td>
+<td>Source level single step, stepping over calls. Defaults to current
+thread unless specified.</td>
+</tr>
+<tr class="odd">
+<td>nexti</td>
+<td>Instruction level single step, stepping over calls. Defaults to
+current thread unless specified.</td>
+</tr>
+<tr class="even">
+<td>ni</td>
+<td>Instruction level single step, stepping over calls. Defaults to
+current thread unless specified.</td>
+</tr>
+<tr class="odd">
+<td>p</td>
+<td>Print a variable or expression.</td>
+</tr>
+<tr class="even">
+<td>parray</td>
+<td>parray <COUNT> <EXPRESSION> – lldb will evaluate EXPRESSION to get a
+typed-pointer-to-an-array in memory, and will display COUNT elements of
+that type from the array.</td>
+</tr>
+<tr class="odd">
+<td>po</td>
+<td>Evaluate an expression on the current thread. Displays any returned
+value with formatting controlled by the type’s author.</td>
+</tr>
+<tr class="even">
+<td>poarray</td>
+<td>poarray <COUNT> <EXPRESSION> – lldb will evaluate EXPRESSION to get
+the address of an array of COUNT objects in memory, and will call po on
+them.</td>
+</tr>
+<tr class="odd">
+<td>print</td>
+<td>Print a variable or expression.</td>
+</tr>
+<tr class="even">
+<td>q</td>
+<td>Quit the LLDB debugger.</td>
+</tr>
+<tr class="odd">
+<td>r</td>
+<td>Launch the executable in the debugger.</td>
+</tr>
+<tr class="even">
+<td>rbreak</td>
+<td>Sets a breakpoint or set of breakpoints in the executable.</td>
+</tr>
+<tr class="odd">
+<td>re</td>
+<td>Commands to access registers for the current thread and stack
+frame.</td>
+</tr>
+<tr class="even">
+<td>repl</td>
+<td>Evaluate an expression on the current thread. Displays any returned
+value with LLDB’s default formatting.</td>
+</tr>
+<tr class="odd">
+<td>run</td>
+<td>Launch the executable in the debugger.</td>
+</tr>
+<tr class="even">
+<td>s</td>
+<td>Source level single step, stepping into calls. Defaults to current
+thread unless specified.</td>
+</tr>
+<tr class="odd">
+<td>shell</td>
+<td>Run a shell command on the host.</td>
+</tr>
+<tr class="even">
+<td>si</td>
+<td>Instruction level single step, stepping into calls. Defaults to
+current thread unless specified.</td>
+</tr>
+<tr class="odd">
+<td>sif</td>
+<td>Step through the current block, stopping if you step directly into a
+function whose name matches the TargetFunctionName.</td>
+</tr>
+<tr class="even">
+<td>step</td>
+<td>Source level single step, stepping into calls. Defaults to current
+thread unless specified.</td>
+</tr>
+<tr class="odd">
+<td>stepi</td>
+<td>Instruction level single step, stepping into calls. Defaults to
+current thread unless specified.</td>
+</tr>
+<tr class="even">
+<td>t</td>
+<td>Change the currently selected thread.</td>
+</tr>
+<tr class="odd">
+<td>tbreak</td>
+<td>Set a one-shot breakpoint using one of several shorthand
+formats.</td>
+</tr>
+<tr class="even">
+<td>undisplay</td>
+<td>Stop displaying expression at every stop (specified by stop-hook
+index.)</td>
+</tr>
+<tr class="odd">
+<td>up</td>
+<td>Select an older stack frame. Defaults to moving one frame, a numeric
+argument can specify an arbitrary number.</td>
+</tr>
+<tr class="even">
+<td>v</td>
+<td>Show variables for the current stack frame. Defaults to all
+arguments and local variables in scope. Names of argument, local, file
+static and file global variables can be specified.</td>
+</tr>
+<tr class="odd">
+<td>var</td>
+<td>Show variables for the current stack frame. Defaults to all
+arguments and local variables in scope. Names of argument, local, file
+static and file global variables can be specified.</td>
+</tr>
+<tr class="even">
+<td>vo</td>
+<td>Show variables for the current stack frame. Defaults to all
+arguments and local variables in scope. Names of argument, local, file
+static and file global variables can be specified.</td>
+</tr>
+<tr class="odd">
+<td>x</td>
+<td>Read from the memory of the current target process.</td>
+</tr>
+</tbody>
+</table>
