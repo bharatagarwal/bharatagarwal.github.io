@@ -1,3 +1,5 @@
+# How to slay interviews and not be slain by them
+
 Even though you might have your issues with whiteboard/ds-algo interviews, they are inevitable.
 
 > The only way out is through the belly of the beast, so cry havoc and let slip the dogs of whiteboard.
