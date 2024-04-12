@@ -134,6 +134,27 @@ Choose most comfortable.
         - Performance double-check
     - Are you reinventing the wheel?
 
+## Logging
+
+```python
+import logging
+
+FORMAT = "[%(filename)s:%(lineno)s - %(funcName)10s() ] %(message)s"
+
+logging.basicConfig(format=FORMAT, level=logging.WARN)
+
+logger = logging.getLogger(__name__)
+
+def some_test_function():
+  logger.warning("This is a test message")
+some_test_function()
+```
+will output:
+
+```plaintext
+[test.py:8 - some_test_function() ] This is a test message
+```
+
 ## Misc advice:
 - Politely ask to get straight to the question after 5 minutes
 - Be prepared for followup questions
