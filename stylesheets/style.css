@@ -1,6 +1,7 @@
 @import url('whitespace-reset.css');
+/*
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
+/*  */
 :root {
     --hover: #6df0de;
     --highlight: #d53a84;
@@ -8,7 +9,7 @@
     --white: #fff;
     --alt-background: #ecf0f1;
 }
-
+/* 
 
 html {
     font-size: 18px;
@@ -80,22 +81,23 @@ section {
     text-align: center;
 }
 
-.icon {
+*/
+.logo {
     background-color: var(--highlight);
     border: solid 1px var(--highlight);
     border-radius: 25px;
     margin: 2%;
     min-width: 34px;
     padding: 3px;
-    width: 100%;
+    width: 100%; 
 }
 
-.btn:hover,
-.icon:hover {
+.logo:hover {
     background-color: var(--hover);
     border-color: var(--hover);
 }
 
+/*
 .horz-center {
     -ms-align-items: center;
     align-items: center;
@@ -188,27 +190,15 @@ div>iframe {
     width: 228px;
 }
 
-#resume-logo {
+*/
+.logo {
     cursor: pointer;
     width: 35px;
     top: 5px;
     left: 5px;
 }
 
-#github-logo {
-    cursor: pointer;
-    width: 35px;
-    top: 55px;
-    left: 5px;
-}
-
-#linkedin-logo {
-    cursor: pointer;
-    width: 35px;
-    top: 105px;
-    left: 5px;
-}
-
+/*
 
 #contact {
     padding-top: 50px;
@@ -366,3 +356,5 @@ div>iframe {
     top: 155px;
     left: 5px;
 }
+*/
+
