@@ -16,7 +16,7 @@ html {
 
 h3,
 #resume-btn {
-    color: var(--hover);
+    color: var(--highlight);
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
@@ -191,7 +191,6 @@ div>iframe {
 #resume-logo {
     cursor: pointer;
     width: 35px;
-    position: fixed;
     top: 5px;
     left: 5px;
 }
@@ -199,7 +198,6 @@ div>iframe {
 #github-logo {
     cursor: pointer;
     width: 35px;
-    position: fixed;
     top: 55px;
     left: 5px;
 }
@@ -207,7 +205,6 @@ div>iframe {
 #linkedin-logo {
     cursor: pointer;
     width: 35px;
-    position: fixed;
     top: 105px;
     left: 5px;
 }
