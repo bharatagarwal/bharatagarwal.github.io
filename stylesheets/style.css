@@ -9,12 +9,14 @@
     --white: #fff;
     --alt-background: #ecf0f1;
 }
-/* 
 
 html {
     font-size: 18px;
+    font-family: system-ui;
+    width: 700px;
+    margin: 0 auto;
 }
-
+/*
 h3,
 #resume-btn {
     color: var(--highlight);
