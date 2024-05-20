@@ -16,7 +16,7 @@
           </time>
         </i>
       </span>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <a href="{{ .Permalink | relURL }}">{{ .Title }}</a>
     </li>
     {{ else }}
     <li>
@@ -29,7 +29,7 @@
     <small>
       <div>
         {{ range .Site.Taxonomies.tags }}
-        <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>&nbsp;
+        <a href="{{ .Page.Permalink | relURL }}">#{{ .Page.Title }}</a>&nbsp;
         {{ end }}
       </div>
     </small>
