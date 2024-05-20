@@ -1,1 +1,0 @@
-Developed several personal and open-source applications with technologies such as Ruby, Node.js, Rails, React and Sinatra.

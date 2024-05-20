@@ -1,0 +1,135 @@
+{
+  "selectedTemplate": 6,
+  "headings": {
+    "work": "Experience",
+    "skills": "Skills",
+    "projects": "",
+    "awards": "",
+    "education": "Education"
+  },
+  "basics": {
+    "name": "Bharat Agarwal",
+    "website": "https://bharatagarwal.io",
+    "location": {
+      "address": "bharatagarwal@gmail.com"
+    },
+    "email": "Bangalore, India"
+  },
+  "education": [
+    {
+      "studyType": "",
+      "endDate": "2019",
+      "institution": "Launch School",
+      "location": "Remote",
+      "area": "Full-Stack Development",
+      "startDate": "2017"
+    },
+    {
+      "institution": "School of Planning and Architecture",
+      "location": "New Delhi",
+      "studyType": "Bachelor of Architecture",
+      "startDate": "2009",
+      "endDate": "2015"
+    }
+  ],
+  "work": [
+    {
+      "company": "Mothership PaaS",
+      "website": "",
+      "startDate": "Sep 2019",
+      "highlights": [
+        "Mothership is an open-source platform-as-a-service for deploying small applications.",
+        "Built a distributed multi-tenant architecture for deployed applications",
+        "Programmatically provisioned deployment-ready servers on DigitalOcean with Docker Machine",
+        "Implemented API calls to Docker Swarm to perform CRUD functions with containers on the remote manager machine",
+        "Utilised core web APIs to provide observability features for the PaaS",
+        "Leveraged WebSockets for providing service logs to users",
+        "Streamed application build output to web and CLI using Server Sent Events",
+        "Designed workflows and information architecture for the web application interface",
+        "Read case study at: https://mothership.live/case-study"
+      ],
+      "position": "Co-creator & Software Engineer",
+      "location": "Remote",
+      "endDate": "Present"
+    },
+    {
+      "highlights": [
+        "Developed a variety of open source web applications using JavaScript, Node.js, Ruby, Ruby on Rails, SQL, HTML, CSS, and React.",
+        "Kanban: A project management app similar to Trello built with React/Redux and Rails",
+        "Grapevine: A social news and discussion application similar to Reddit built with Rails",
+        "Crossout: A task management application built with Nodejs, jQuery, and Handlebars"
+      ],
+      "position": "Full Stack Developer",
+      "company": "Self Employed",
+      "endDate": "Aug 2019",
+      "startDate": "Feb 2018"
+    },
+    {
+      "highlights": [
+        "Collaborated with Disorient to design structures for Burning Man '17 & '18",
+        "Generated an urban plan for the Singularity Festival of Learning in collaboration with Jaaga"
+      ],
+      "company": "Self Employed",
+      "startDate": "Nov 2016",
+      "position": "Architect",
+      "endDate": "Aug 2018"
+    }
+  ],
+  "skills": [
+    {
+      "level": "",
+      "keywords": [
+        "Ruby",
+        "JavaScript (ES6)",
+        "SQL",
+        "Bash"
+      ],
+      "name": "Languages"
+    },
+    {
+      "keywords": [
+        "Express.js",
+        "Docker",
+        "Git",
+        "Rails",
+        "Container Orchestration (Docker Swarm)",
+        "DigitalOcean VPS",
+        "HTML/CSS",
+        ""
+      ],
+      "name": "Frameworks"
+    },
+    {
+      "keywords": [
+        ""
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "",
+      "description": "",
+      "url": "",
+      "keywords": [
+        ""
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "",
+      "date": "",
+      "awarder": "",
+      "summary": ""
+    }
+  ],
+  "sections": [
+    "templates",
+    "profile",
+    "work",
+    "education",
+    "skills",
+    "projects",
+    "awards"
+  ]
+}

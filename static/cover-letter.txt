@@ -1,0 +1,21 @@
+First things first. I'm an Indian citizen, and would need visa sponsorship for this role
+
+I've worked in a big company, and experienced the pros-and-cons of that. The benefits being, following a proper decision making process, and being very thorough about verification, and ultimately, reliability. 
+
+The drawback has been, lots of internal orchestration, and slow velocity.  I've also done open-source work in a tiny team, and seen a breakneck speed of implementation -- often without thinking of the consequences. I'd ideally like something in between now.
+
+I can do application logic, I know standard application development patterns, I follow TDD and progressive deployment. Those are table stakes for any software job.
+
+I'd like to work with engineers who are both senior and junior to me. I think I have experiences to share with juniors, and I enjoy talking to senior folks. Mentorship is something I'd like to be involved in.
+
+I'm not researching every company, and don't have an answer for why specifically your company. I'm hoping that will reveal itself in the interview process, that both I and you feel like working together. Why not give it a shot?
+------
+
+I have worked at a big company, Atlassian, that has had stringent reliability requirements, and is very careful about what goes into production. I have also developed a product myself, in a team of three, that is very horizontally organised, and developed features at breakneck speeds.
+
+I've seen both ends of the spectrum, and I can bring that experience to you.
+------
+
+Handling a high-severity incident, caused by my own pull-request! I skipped some stages of a laborious testing process in pursuit of a tight deadline, and caused an incident that led to data corruption on some client servers.
+
+I noticed it quickly, called it out, rolled back my change, contacted affected stakeholders, shared runbooks on how to solve it (which was an order of magnitude more laborious than the initial testing), and improved out deployment process. Sometimes it's about how to recover from disaster, rather than building out something glorious.

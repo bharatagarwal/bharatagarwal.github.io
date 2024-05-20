@@ -1,0 +1,13 @@
+As part of the Jira Migration Platform team, I:
+- Contributed to the company's #1 priority: server to cloud migrations. 
+- Maintained Jira Migration Target, a critical service with a 99.995% availability requirement for enterprise users
+- Handled high severity incidents as part of on-call roster. 
+
+As part of the Resilience Engineering team, I:
+- Increased adoption  of chaos engineering experiments by automating our 'war game' process 
+- Reduced number of engineers required to run experiments, by consolidating load testing metrics, SRE 'golden metrics' and event-tracking into one place.
+- Propagated network turbulence using AWS SSM documents, working within framework of the company's internal PaaS.
+
+Initiatives:
+- Developed a collaborative graph-based user interface for Confluence, our enterprise wiki offering. Got a patent for this.
+- Pitched for, and drove an initiative for adoption of 'inner-source' documentation practices in internal services within the company
