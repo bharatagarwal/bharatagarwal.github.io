@@ -3,7 +3,7 @@
 baseURL = "https://bharatagarwal.io"
 
 # The name of this wonderful theme ;-).
-theme = 'hugo-bearblog'
+# theme = 'hugo-bearblog'
 
 # Basic metadata configuration for your blog.
 title = "The personal site of Bharat Agarwal"

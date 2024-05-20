@@ -1,2 +1,2 @@
 User-Agent: *
-Sitemap: http://localhost:63953/sitemap.xml
+Sitemap: https://bharatagarwal.io/sitemap.xml

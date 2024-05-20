@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:63953/blog/</loc>
+    <loc>https://bharatagarwal.io/blog/</loc>
     <lastmod>2024-01-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63953/</loc>
+    <loc>https://bharatagarwal.io/</loc>
     <lastmod>2024-01-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63953/lea-v/s-mov-in-x86-assembly/</loc>
+    <loc>https://bharatagarwal.io/lea-v/s-mov-in-x86-assembly/</loc>
     <lastmod>2024-01-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63953/blog/markdown/</loc>
+    <loc>https://bharatagarwal.io/blog/markdown/</loc>
     <lastmod>2024-01-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63953/blog/syntax/</loc>
+    <loc>https://bharatagarwal.io/blog/syntax/</loc>
     <lastmod>2024-01-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:63953/markdown-syntax-guide/</loc>
+    <loc>https://bharatagarwal.io/markdown-syntax-guide/</loc>
     <lastmod>2020-01-03T00:00:00+00:00</lastmod>
   </url>
 </urlset>
