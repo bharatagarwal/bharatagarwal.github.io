@@ -1,4 +1,11 @@
-# How to slay interviews and not be slain by them
+---
+title: DS/A interviewing notes from Joshua Goller's post
+description: A summation from Joshua Goller's post on how to prepare for technical interviews.
+slug: interviewing-notes
+tags:
+    - interview-prep
+date: 2024-05-23T09:09:22.216Z
+---
 
 Even though you might have your issues with whiteboard/ds-algo interviews, they are inevitable.
 

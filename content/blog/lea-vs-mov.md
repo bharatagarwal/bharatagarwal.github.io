@@ -1,3 +1,13 @@
+---
+title: lea v/s mov in x86 assembly
+description: Subtle differences between lea and mov in x86 Assembly.
+tags:
+    - explainer
+    - assembly
+slug: lea-vs-mov
+---
+
+
 ## The dilemma
 
 In x86/64 assembly intel syntax, for a long time, I've been confused between the load effective address (`lea`) and move (`mov`) instructions.   
