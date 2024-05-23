@@ -1,12 +1,11 @@
-+++
-title = "lea v/s mov in x86 assembly"
-date = "2024-01-03"
-description = "Sample article checking how my content looks."
-tags = [
-    "markdown",
-    "syntax",
-]
-+++
+---
+title: lea v/s mov in x86 assembly
+description: Subtle differences between lea and mov in x86 Assembly.
+tags:
+    - explainer
+    - assembly
+slug: lea-vs-mov
+---
 
 
 ## The dilemma

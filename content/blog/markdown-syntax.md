@@ -1,16 +1,10 @@
-+++
-title = "Markdown Syntax Guide"
-date = "2020-01-03"
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-tags = [
-    "markdown",
-    "syntax",
-]
-+++
-
-For a quick cheatsheet, check out https://simplemde.com/markdown-guide.
-
 ---
+title: Markdown Syntax Guide
+description: Sample article showcasing basic Markdown syntax and formatting for HTML elements.
+date: 2024-03-20T09:14:12.000Z
+slug: markdown-syntax-guide
+---
+For a quick cheatsheet, check out https://simplemde.com/markdown-guide.
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
 <!--more-->
